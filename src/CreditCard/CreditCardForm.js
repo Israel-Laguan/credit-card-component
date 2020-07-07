@@ -1,11 +1,8 @@
 import React from "react";
-import css from "./CreditCardForm.module.css";
+
 const CreditCardForm = ({ card, onChange }) => {
   return (
-    <form
-      onSubmit={(e) => console.log(e.target)}
-      className={css.creditCardForm}
-    >
+    <form onSubmit={(e) => console.log(e.target)} className="creditCardForm">
       <fieldset>
         <label>Cardholder's Name</label>
         <input

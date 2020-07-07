@@ -1,7 +1,7 @@
 import React from "react";
 import CreditCardForm from "./CreditCardForm";
 import check from "./checkIIN";
-import css from "./CreditCard.module.css";
+
 const { checkNetwork, networktoClass } = check;
 
 const CreditCard = () => {
@@ -20,7 +20,7 @@ const CreditCard = () => {
     }
   };
   return (
-    <div className={css.creditCard}>
+    <div className="creditCard">
       <div data={`${networktoClass(network)}`}>{network}</div>
       <CreditCardForm card={card} onChange={onChange} />
     </div>
