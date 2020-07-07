@@ -1,0 +1,29 @@
+.creditCardForm {
+  width: 11em;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #24282f, #2b2f38);
+  box-shadow: 13px 13px 26px #1e2127, -13px -13px 26px #323741;
+}
+
+.creditCardForm fieldset {
+  border: none;
+  display: flex;
+}
+
+.creditCardForm fieldset label {
+  margin: 0.5em 0;
+  color: gray;
+  font-size: medium;
+}
+
+.creditCardForm fieldset input {
+  margin: 0.5em 0;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.creditCardForm div {
+    display: flex;
+}
