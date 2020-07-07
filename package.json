@@ -14,11 +14,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish": "npm run build && surge ./build credit-card-component.surge.sh"
+  },
+  "author": {
+    "name": "Israel Antonio Rosales Laguan",
+    "email": "contact@israellaguan.com",
+    "url": "http://israellaguan.com",
+    "GitHub": "https://github.com/Israel-Laguan",
+    "LinkedIn": "https://www.linkedin.com/in/israellaguan/",
+    "hireable": true
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "license": "ISC",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -30,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "surge": "^0.21.5"
   }
 }
