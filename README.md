@@ -38,12 +38,12 @@
 - [The Project](#the-project)
   - [Features](#features)
   - [Run It](#run-it)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Available Scripts](#available-scripts)
-    - [`npm start`](#npm-start)
-    - [`npm test`](#npm-test)
-    - [`npm run publish`](#npm-run-publish)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Available Scripts](#available-scripts)
+      - [`npm start`](#npm-start)
+      - [`npm test`](#npm-test)
+      - [`npm run publish`](#npm-run-publish)
   - [Author](#author)
   - [Contributing](#contributing)
   - [Show your support](#show-your-support)
@@ -51,7 +51,7 @@
 
 # The Project
 
-Card type detection using regex for a credit card form component. As managing money as programmers is impportant, we also have to take care of the looks.
+Card type detection using regex for a credit card form component. As managing money for programmers is important, we have to make sure things like card issuer are as the user says; also we have to take care of the looks.
 
 This projects shows how to check dynamically for the Network issuing certain cards based on the [Issuer identification number (IIN)](https://en.wikipedia.org/wiki/Payment_card_number). This way we can create better user experience and take care of security issues, for example validating client-side the card number.
 
@@ -71,13 +71,13 @@ Based on [this gist](https://gist.github.com/andreamiranda019/8f768ce78ae6a1095d
 
 ## Run It
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). So is already setup to be wasily developed and run.
 
-## Prerequisites
+### Prerequisites
 
 You will need [Node.js](https://nodejs.org) version 8.0 or greater installed on your system.
 
-## Setup
+### Setup
 
 Get the code by either cloning this repository using git
 
@@ -105,28 +105,31 @@ The app should now be up and running at http://localhost:3000 🚀
 
 ![Component](docs/credit-card.gif)
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+The page will reload if you make edits.
+
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode.
+
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ![tests](docs/tests.gif)
 
-### `npm run publish`
+#### `npm run publish`
 
-Builds and then publish the app to `surge.sh`
+Builds and then publish the app to `surge.sh`, in this case to `http://credit-card-component.surge.sh/`.
 
 ## Author
 

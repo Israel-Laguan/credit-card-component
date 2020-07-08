@@ -95,7 +95,6 @@
 
 .creditCardForm fieldset {
   border: none;
-  display: flex;
 }
 
 .creditCardForm fieldset label {
