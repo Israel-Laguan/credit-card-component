@@ -26,15 +26,10 @@
   </p>
 </p>
 
-# [Live Version Here](http://credit-card-component.surge.sh/)
-
-![discover](docs/credit-card-component.png)
-
 ## Table of Contents
 
 - [Credit Card Component](#credit-card-component)
 - [Live Version Here](#live-version-here)
-  - [Table of Contents](#table-of-contents)
 - [The Project](#the-project)
   - [Features](#features)
   - [Run It](#run-it)
@@ -48,6 +43,10 @@
   - [Contributing](#contributing)
   - [Show your support](#show-your-support)
   - [License](#license)
+
+# [Live Version Here](http://credit-card-component.surge.sh/)
+
+![discover](docs/credit-card-component.png)
 
 # The Project
 
