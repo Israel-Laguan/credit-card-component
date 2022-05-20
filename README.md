@@ -188,7 +188,7 @@ Feel free to check the [issues page][issues-url].
 
 🤗 Give a ⭐️ if you like this project!
 
-Icon from:
+Icons from:
 
 <a target="_blank" href="https://icons8.com">Icons8</a>
 
