@@ -188,9 +188,9 @@ Feel free to check the [issues page][issues-url].
 
 🤗 Give a ⭐️ if you like this project!
 
-Icon from:
+Icons from:
 
-<a target="_blank" href="https://icons8.com/icons/set/credit-card">icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com">Icons8</a>
 
 Regexs: Adapted form [here](https://www.w3resource.com/javascript/form/credit-card-validation.php)
 Design Idea: [Dribble](https://dribbble.com/shots/11991452-Daily-UI-Challenge-002-Credit-Card-Checkout-Neumorphism)
