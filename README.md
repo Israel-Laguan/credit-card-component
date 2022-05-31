@@ -1,6 +1,7 @@
 # Credit Card Component
 
 <!-- PROJECT SHIELDS -->
+
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues-open][issues-open-shield]][issues-url]
@@ -59,10 +60,10 @@ Based on [this gist](https://gist.github.com/andreamiranda019/8f768ce78ae6a1095d
 
 ## Features
 
-![javascript][]
-![react][]
+[![][javascript]][javascript-url]
+[![][react]][react-url]
 [![Framework][badge-framework]][framework-url]
-![css][]
+[![][css]][css-url]
 
 - Using Create React App (CRA)
 - No Style Framework, only pure CSS (Looking at you Bootstrap...)
@@ -175,7 +176,7 @@ Builds and then publish the app to `surge.sh`, in this case to `http://credit-ca
         </div>
     </td>
   </tr>
-</table> 
+</table>
 
 ## Contributing
 
@@ -203,6 +204,7 @@ Design Idea: [Dribble](https://dribbble.com/shots/11991452-Daily-UI-Challenge-00
 Feel free to fork this project and improve it
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/Israel-Laguan/credit-card-component?style=for-the-badge
 [contributors-url]: https://github.com/Israel-Laguan/credit-card-component/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Israel-Laguan/credit-card-component?style=for-the-badge
@@ -220,3 +222,9 @@ Feel free to fork this project and improve it
 [react]: https://img.shields.io/badge/React-16+-61DAFB?style=for-the-badge&logo=react
 [javascript]: https://img.shields.io/badge/JAVASCRIPT-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript
 [css]: https://img.shields.io/badge/style-CSS-1572B6?style=for-the-badge&logo=css3
+
+<!-- URL -->
+
+[react-url]: https://reactjs.org/
+[css-url]: https://www.w3schools.com/css/
+[javascript-url]: https://devdocs.io/javascript/
