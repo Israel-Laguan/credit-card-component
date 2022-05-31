@@ -27,15 +27,10 @@
   </p>
 </p>
 
-# [Live Version Here](http://credit-card-component.surge.sh/)
-
-![discover](docs/credit-card-component.png)
-
 ## Table of Contents
 
 - [Credit Card Component](#credit-card-component)
 - [Live Version Here](#live-version-here)
-  - [Table of Contents](#table-of-contents)
 - [The Project](#the-project)
   - [Features](#features)
   - [Run It](#run-it)
@@ -49,6 +44,10 @@
   - [Contributing](#contributing)
   - [Show your support](#show-your-support)
   - [License](#license)
+
+# [Live Version Here](http://credit-card-component.surge.sh/)
+
+![discover](docs/credit-card-component.png)
 
 # The Project
 
@@ -151,28 +150,29 @@ Builds and then publish the app to `surge.sh`, in this case to `http://credit-ca
     <td>
         <div align="center">
             <a href="mailto:israellaguan@gmail.com" target="_blank" rel="author">
-                <img src="https://img.icons8.com/color/48/000000/message-squared.png" style="border-radius: 10%" alt="My GitHub" height="45px">
-                <h3>
-                    Email me to 
-                    <a href="mailto:israellaguan@gmail.com">
-                        israellaguan@gmail.com
-                    </a>
-                </h3>
+                <img src="https://img.icons8.com/color/48/000000/message-squared.png" alt="My GitHub" height="45px">
             </a>
+            <h3>
+                <a href="mailto:israellaguan@gmail.com" target="_blank" rel="author">
+                    Email me to israellaguan@gmail.com
+                </a>
+            </h3>
             <a href="https://www.linkedin.com/in/israellaguan/" target="_blank" rel="author">
                 <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="My Linkedin" height="45px">
-                <h3>
+            </a>
+            <h3>
+                <a href="https://www.linkedin.com/in/israellaguan/" target="_blank" rel="author">
                     Connect to my Linkedin
-                </h3>
-            </a>
+                </a>
+            </h3>
             <a href="https://github.com/Israel-Laguan" target="_blank" rel="author">
-                <img src="https://img.icons8.com/color/48/000000/github--v1.png" 
-			style="border-radius: 10%" alt="My GitHub" height="45px"
-		>
-                <h3>
-                    Check my GitHub Profile
-                </h3>
+                <img src="https://img.icons8.com/color/48/000000/github--v1.png" alt="My GitHub" height="45px">
             </a>
+            <h3>
+                <a href="https://github.com/Israel-Laguan" target="_blank" rel="author">
+                    Check my GitHub Profile
+                </a>
+            </h3>
         </div>
     </td>
   </tr>
