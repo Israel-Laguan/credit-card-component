@@ -115,6 +115,8 @@
 
 .creditCardForm fieldset input:focus{
   outline: none;
+  border-bottom: 1px solid #000;
+  transition: border-bottom .6s;
 }
 
 .creditCardForm div {
