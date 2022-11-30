@@ -106,12 +106,18 @@
 .creditCardForm fieldset input {
   color: white;
   margin: 0.5em 0;
+  padding: 3px;
   width: 100%;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid gray;
 }
 
+.creditCardForm fieldset input:focus{
+  outline: none;
+}
+
 .creditCardForm div {
   display: flex;
 }
+
