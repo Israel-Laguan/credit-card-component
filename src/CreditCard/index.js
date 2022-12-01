@@ -48,7 +48,7 @@ const CreditCard = () => {
           <p>{CodeCard}</p>
         </span>
       </div>
-      <CreditCardForm card={card} onchange={onChange} props={{handleChangeName, handleChangeCode, handleChangeDate}}/>
+      <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate}/>
     </div>
   );
 };

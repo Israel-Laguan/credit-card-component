@@ -1,7 +1,6 @@
 import React from "react";
 
-const CreditCardForm = ({ card, onchange, props}) => {
-  const {handleChangeCode, handleChangeDate, handleChangeName} = props
+const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName}) => {
   const onKeyDown = (e) => {
     // https://stackoverflow.com/a/43710277
     let key = e.keyCode || e.which; // get key cross-browser
