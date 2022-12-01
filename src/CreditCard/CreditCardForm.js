@@ -1,6 +1,7 @@
 import React from "react";
 
-const CreditCardForm = ({ card, onChange, handleChangeName}) => {
+const CreditCardForm = ({ card, onchange, props}) => {
+  const {handleChangeCode, handleChangeDate, handleChangeName} = props
   const onKeyDown = (e) => {
     // https://stackoverflow.com/a/43710277
     let key = e.keyCode || e.which; // get key cross-browser
@@ -60,14 +61,15 @@ const CreditCardForm = ({ card, onChange, handleChangeName}) => {
           pattern="\d*"
           onKeyDown={onKeyDown}
           value={card}
-          onChange={onChange}
+          onChange={onchange}
         />
       </fieldset>
       <div>
         <fieldset className="info_user">
           <label>MM/YY</label>
           <input 
-            type="text" 
+            type="text"
+            onChange={handleChangeDate} 
           />
         </fieldset>
         <fieldset className="info_user">
@@ -76,6 +78,7 @@ const CreditCardForm = ({ card, onChange, handleChangeName}) => {
             type="text" 
             minLength="2" 
             maxLength="3"
+            onChange={handleChangeCode} 
           />
         </fieldset>
       </div>

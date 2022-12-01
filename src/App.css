@@ -86,6 +86,23 @@
   );
 }
 
+.creditCard p{
+  margin: 5px 0;
+}
+
+.creditCard p:first-child{
+  margin: 18px 0;
+}
+
+.creditCard span{
+  width: 100%;
+  display: flex;
+}
+
+.creditCard span p:first-child{
+  margin: 5px 90px 0 0;
+}
+
 .creditCardForm {
   width: 13em;
   margin: 0 0 20px 0;
