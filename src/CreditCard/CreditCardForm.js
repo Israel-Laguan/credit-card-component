@@ -1,6 +1,6 @@
 import React from "react";
 
-const CreditCardForm = ({ card, onChange }) => {
+const CreditCardForm = ({ card, onChange, handleChangeName}) => {
   const onKeyDown = (e) => {
     // https://stackoverflow.com/a/43710277
     let key = e.keyCode || e.which; // get key cross-browser
@@ -38,7 +38,7 @@ const CreditCardForm = ({ card, onChange }) => {
   };
   return (
     <form onSubmit={(e) => console.log(e.target)} className="creditCardForm">
-      <fieldset>
+      <fieldset className="info_user">
         <label>Cardholder's Name</label>
         <input
           type="text"
@@ -46,9 +46,11 @@ const CreditCardForm = ({ card, onChange }) => {
           autoComplete="name"
           minLength="5"
           maxLength="56"
+          onChange={handleChangeName}
+          className='UserName'
         />
       </fieldset>
-      <fieldset>
+      <fieldset className="info_user">
         <label>Card Number</label>
         <input
           type="text"
@@ -62,19 +64,28 @@ const CreditCardForm = ({ card, onChange }) => {
         />
       </fieldset>
       <div>
-        <fieldset>
+        <fieldset className="info_user">
           <label>MM/YY</label>
-          <input type="text" />
+          <input 
+            type="text" 
+          />
         </fieldset>
-        <fieldset>
+        <fieldset className="info_user">
           <label>CCV</label>
-          <input type="text" minLength="2" maxLength="3" />
+          <input 
+            type="text" 
+            minLength="2" 
+            maxLength="3"
+          />
         </fieldset>
       </div>
       <fieldset>
         <label>Save for later</label>
-        <input type="checkbox" defaultChecked="true" />
+        <input className="checkbox" type="checkbox" defaultChecked="true" />
       </fieldset>
+      <div>
+        <button>Send</button>
+      </div>
     </form>
   );
 };
