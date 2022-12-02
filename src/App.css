@@ -153,3 +153,7 @@
   color: gray;
   background: #323741;
 }
+
+.error{
+  display: none;
+}

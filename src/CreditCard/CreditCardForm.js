@@ -36,6 +36,22 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     if (e.preventDefault) e.preventDefault(); //normal browsers
     e.returnValue = false; //IE
   };
+
+  const ValidationForm = (e) =>{
+    e.preventDefault()
+
+    const CardNumber = document.querySelector('#CardNumber').value
+    
+    if(CardNumber.length < 13 || CardNumber.length > 20){
+      const error = document.querySelector('.error')
+      error.style.display = 'block'
+      setTimeout(() => {
+        error.style.display = 'none'
+      }, 5000);
+    }
+
+  }
+
   return (
     <form onSubmit={(e) => console.log(e.target)} className="creditCardForm">
       <fieldset className="info_user">
@@ -46,8 +62,8 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           autoComplete="name"
           minLength="5"
           maxLength="56"
+          id="CardName"
           onChange={handleChangeName}
-          className='UserName'
         />
       </fieldset>
       <fieldset className="info_user">
@@ -58,6 +74,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           maxLength="20"
           name="card"
           pattern="\d*"
+          id='CardNumber'
           onKeyDown={onKeyDown}
           value={card}
           onChange={onchange}
@@ -68,6 +85,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           <label>MM/YY</label>
           <input 
             type="text"
+            id="CardDate"
             onChange={handleChangeDate} 
           />
         </fieldset>
@@ -77,6 +95,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
             type="text" 
             minLength="2" 
             maxLength="3"
+            id='CodeCard'
             onChange={handleChangeCode} 
           />
         </fieldset>
@@ -86,7 +105,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         <input className="checkbox" type="checkbox" defaultChecked="true" />
       </fieldset>
       <div>
-        <button>Send</button>
+        <button onClick={ValidationForm}>Send</button>
       </div>
     </form>
   );
