@@ -22,17 +22,19 @@
   cursor: pointer;
 }
 
-.creditCard {
+.flex-creditCard{
+  width: 60%;
+  margin: 5% auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.creditCard div:first-child {
+
+.creditCard div:first-child{
   margin: 1em 0;
   padding: 1em;
-  height: 7em;
-  width: 11em;
+  height: 8em;
+  width: 14em;
   border-radius: 20px;
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
@@ -84,7 +86,7 @@
     rgba(212, 225, 87, 1) 23%,
     rgba(175, 180, 43, 1) 35%
   );
-}
+} 
 
 .creditCard p{
   margin: 5px 0;
@@ -103,9 +105,9 @@
   margin: 5px 90px 0 0;
 }
 
-.creditCardForm {
-  width: 13em;
-  margin: 0 0 20px 0;
+.creditCardForm{
+  width: 14em;
+  margin: 0 0 20px 120px;
   border-radius: 14px;
   background: linear-gradient(145deg, #24282f, #2b2f38);
   box-shadow: 13px 13px 26px #1e2127, -13px -13px 26px #323741;
@@ -156,4 +158,90 @@
 
 .error{
   display: none;
+}
+
+.CodeBarra{
+  width: 100%;
+  height: 50px;
+  margin: 25px 0 0 0;
+  background: #000;
+}
+
+.codeCard{
+  width: 70px;
+  height: 30px;
+  top: 50%;
+  left: 75%;
+  padding: 5px;
+  position: absolute;
+  display: block;
+  text-align: center;
+  background: #333;
+}
+
+.flex-date-user{
+  width: 100%;
+  display: flex;
+}
+
+.flex-date-user p{
+  margin: 19px;
+}
+
+.flex-date-user:first-child{
+  width: 20%;
+}
+
+.flex-date-user:nth-child(2){
+  width: 90%;
+}
+
+
+/* ------style animation flip-------- */
+
+.flip-card {
+  background-color: transparent;
+  width: 15em;
+  height: 12em;
+  border: 1px solid #282c34;
+  perspective: 2000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back{
+  border-radius: 20px;
+  margin: 23px 0 0 -20px;
+  position: absolute;
+  width: 15em;
+  height: 10em;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back{
+  width: 107%;
+  height: 83%;
+  transform: rotateY(180deg);
+  background: blue;
 }
