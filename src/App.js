@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import CreditCard from './CreditCard';
 import ErrorName from './MessagesError/ErrorName';
+import ErrorNumber from './MessagesError/ErrorNumber';
+import ErrorCode from './MessagesError/ErrorCode';
+import ErrorDate from './MessagesError/ErrorDate';
 
 function App() {
   return (
@@ -13,7 +16,12 @@ function App() {
         </span>
       </header>
       <CreditCard />
-      <ErrorName/>
+      <>
+        <ErrorName/>
+        <ErrorNumber/>
+        <ErrorCode/>
+        <ErrorDate/>
+      </>
     </div>
   );
 }

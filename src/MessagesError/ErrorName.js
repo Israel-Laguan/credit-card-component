@@ -1,14 +1,12 @@
 import React from 'react'
-import '../MessagesError/Errores.css'
 
-const ErrorName = () =>{
+const ErrorCode = () =>{
     return(
-        <div className='error'>
+        <div className='error ErrorName'>
             <h1>Error</h1>
-            <p>Ha ocurrido un error</p>
-            <p>Por favor revise su numero de tarjeta debe ser mayor a 13 y menor a 20 caracteres</p>
+            <p>Por favor revisar su nombre de propietario de la tarjeta debe ser mayor a 5 y menor a 56 caracteres</p>
         </div>
     )
 }
 
-export default ErrorName
+export default ErrorCode;

@@ -38,19 +38,46 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
   };
 
   const ValidationForm = (e) =>{
+
     e.preventDefault()
 
     const CardNumber = document.querySelector('#CardNumber').value
-    
-    if(CardNumber.length < 13 || CardNumber.length > 20){
-      const error = document.querySelector('.error')
+    const CardName = document.querySelector('#CardName').value
+    const CardCode = document.querySelector('#CodeCard').value
+    const CardDate = document.querySelector('#CardDate').value
+  
+    if(CardName.length < 5 || CardName.length > 56){
+      const error = document.querySelector('.ErrorName')
       error.style.display = 'block'
       setTimeout(() => {
         error.style.display = 'none'
       }, 5000);
     }
 
-  }
+    if(CardNumber.length < 13 || CardNumber.length > 20){
+      const error = document.querySelector('.ErrorNumber')
+      error.style.display = 'block'
+      setTimeout(() => {
+        error.style.display = 'none'
+      }, 5000);
+    }
+
+    if(CardCode.length < 3 || CardCode.length > 4){
+      const error = document.querySelector('.ErrorCode')
+      error.style.display = 'block'
+      setTimeout(() => {
+        error.style.display = 'none'
+      }, 5000);
+    }
+
+    if(CardDate.length < 4 || CardDate.length > 5){
+      const error = document.querySelector('.ErrorDate')
+      error.style.display = 'block'
+      setTimeout(() => {
+        error.style.display = 'none'
+      }, 5000);
+    }  
+  };
 
   return (
     <form onSubmit={(e) => console.log(e.target)} className="creditCardForm">
