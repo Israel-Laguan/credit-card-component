@@ -92,7 +92,7 @@
   margin: 5px 0;
 }
 
-.creditCard p:first-child{
+.creditCard p:first-child {
   margin: 18px 0;
 }
 
@@ -101,7 +101,7 @@
   display: flex;
 }
 
-.creditCard span p:first-child{
+.creditCard span p:first-child {
   margin: 5px 90px 0 0;
 }
 
@@ -133,7 +133,7 @@
   border-bottom: 1px solid gray;
 }
 
-.creditCardForm fieldset input:focus{
+.creditCardForm fieldset input:focus {
   outline: none;
   border-bottom: 1px solid #000;
   transition: border-bottom .6s;
@@ -144,7 +144,7 @@
   display: flex;
 }
 
-.creditCardForm div button{
+.creditCardForm div button {
   width: 40%;
   padding: 6px;
   margin: 10px auto 20px auto;
@@ -156,18 +156,18 @@
   background: #323741;
 }
 
-.error{
+.error {
   display: none;
 }
 
-.CodeBarra{
+.CodeBarra {
   width: 100%;
   height: 50px;
   margin: 25px 0 0 0;
   background: #000;
 }
 
-.codeCard{
+.codeCard {
   width: 70px;
   height: 30px;
   top: 50%;
@@ -179,20 +179,20 @@
   background: #333;
 }
 
-.flex-date-user{
+.flex-date-user {
   width: 100%;
   display: flex;
 }
 
-.flex-date-user p{
+.flex-date-user p {
   margin: 19px;
 }
 
-.flex-date-user:first-child{
+.flex-date-user:first-child {
   width: 20%;
 }
 
-.flex-date-user:nth-child(2){
+.flex-date-user:nth-child(2) {
   width: 90%;
 }
 
@@ -217,12 +217,12 @@
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner{
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back{
+.flip-card-front, .flip-card-back {
   border-radius: 20px;
   margin: 23px 0 0 -20px;
   position: absolute;
@@ -239,7 +239,7 @@
 }
 
 /* Style the back side */
-.flip-card-back{
+.flip-card-back {
   width: 107%;
   height: 83%;
   transform: rotateY(180deg);
