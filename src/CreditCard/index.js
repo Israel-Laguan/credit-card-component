@@ -49,11 +49,12 @@ const CreditCard = () => {
               <p>{DateCard}</p>
             </div>
           </div>
-          <div className="flip-card-back">
+          <div className="flip-card-back" data={`${networktoClass(network)}`} >
               <span className="CodeBarra"></span>
               <p className="codeCard">{CodeCard}</p>
           </div>
         </div>
+        <span>Coloca tu mouse encima de la tarjeta</span>
       </div>
       <div>
         <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate}/>
