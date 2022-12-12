@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
 }
+
 .App header > span:first-child {
   margin: 0.5em;
   width: 1.5em;
@@ -30,7 +31,7 @@
   justify-content: center;
 }
 
-.creditCard div:first-child{
+.creditCard div:first-child {
   margin: 1em 0;
   padding: 1em;
   height: 8em;
@@ -96,7 +97,7 @@
   margin: 18px 0;
 }
 
-.creditCard span{
+.creditCard span {
   width: 100%;
   display: flex;
 }
@@ -105,7 +106,7 @@
   margin: 5px 90px 0 0;
 }
 
-.creditCardForm{
+.creditCardForm {
   width: 14em;
   margin: 0 0 20px 120px;
   border-radius: 14px;
