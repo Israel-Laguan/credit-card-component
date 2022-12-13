@@ -1,4 +1,5 @@
 import React from "react";
+import Style from '../CreditCard/styles/CreditCardForm.module.css'
 
 const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName}) => {
   const onKeyDown = (e) => {
@@ -80,8 +81,8 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
   };
 
   return (
-    <form onSubmit={(e) => console.log(e.target)} className="creditCardForm">
-      <fieldset className="info_user">
+    <form onSubmit={(e) => console.log(e.target)} className={Style.creditCardForm}>
+      <fieldset className={Style.info_user}>
         <label>Cardholder's Name</label>
         <input
           type="text"
@@ -93,7 +94,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           onChange={handleChangeName}
         />
       </fieldset>
-      <fieldset className="info_user">
+      <fieldset className={Style.info_user}>
         <label>Card Number</label>
         <input
           type="text"
@@ -108,7 +109,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         />
       </fieldset>
       <div>
-        <fieldset className="info_user">
+        <fieldset className={Style.info_user}>
           <label>MM/YY</label>
           <input 
             type="text"
@@ -116,7 +117,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
             onChange={handleChangeDate} 
           />
         </fieldset>
-        <fieldset className="info_user">
+        <fieldset className={Style.info_user}>
           <label>CCV</label>
           <input 
             type="text" 

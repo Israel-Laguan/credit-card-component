@@ -1,0 +1,63 @@
+.creditCardForm {
+    width: 14em;
+    margin: 0 0 20px 120px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #24282f, #2b2f38);
+    box-shadow: 13px 13px 26px #1e2127, -13px -13px 26px #323741;
+  }
+  
+  .creditCardForm fieldset {
+    border: none;
+  }
+  
+  .creditCardForm fieldset label {
+    margin: 0.5em 0;
+    color: gray;
+    font-size: medium;
+  }
+  
+  .creditCardForm .info_user input {
+    color: white;
+    margin: 0.5em 0;
+    padding: 3px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .creditCardForm fieldset input:focus {
+    outline: none;
+    border-bottom: 1px solid #000;
+    transition: border-bottom .6s;
+    background: transparent;
+  }
+  
+  .creditCardForm div {
+    display: flex;
+  }
+  
+  .creditCardForm div button {
+    width: 40%;
+    padding: 6px;
+    margin: 10px auto 20px auto;
+    border: 0;
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+    color: gray;
+    background: #323741;
+  }
+
+  @media screen and (max-width: 600px) {
+    .creditCardForm {
+      width: 70%;
+      margin: 60px auto;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .creditCardForm {
+      margin: 90px auto;
+    }
+  }
