@@ -1,5 +1,8 @@
-.App {
+body {
   background-color: #282c34;
+}
+
+.App {
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -23,7 +26,7 @@
   cursor: pointer;
 }
 
-.flex-creditCard{
+.flex-creditCard {
   width: 60%;
   margin: 5% auto;
   display: flex;
@@ -89,7 +92,7 @@
   );
 } 
 
-.creditCard p{
+.creditCard p {
   margin: 5px 0;
 }
 
@@ -288,4 +291,75 @@
     rgba(102, 187, 106, 1) 23%,
     rgba(56, 142, 60, 1) 35%
   );
+}
+
+
+/* ----Tablet responsive measures---- */
+
+@media screen and (max-width: 1200px) {
+  .flex-creditCard {
+    width: 50%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .creditCardForm {
+    margin: 90px auto;
+  }
+
+   /* Styles responsives card */
+
+  .flip-card{
+    width: 16em;
+  }
+
+  .flip-card-back {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+
+
+/* ----Mobile responsive measures---- */
+
+@media screen and (max-width: 600px) {
+
+  .flex-creditCard {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .creditCardForm {
+    width: 70%;
+    margin: 60px auto;
+  }
+
+  /* Styles responsives card */
+
+  .flip-card{
+    width: 100%;
+  }
+
+  .flex-creditCard{
+    display: flex;
+  }
+
+  .flip-card-inner{
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+
+  .flip-card-front {
+    width: 88% !important;
+  }
+
+  .flip-card-back {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .codeCard{
+    left: 73%;
+  }
 }

@@ -16,12 +16,10 @@ function App() {
         </span>
       </header>
       <CreditCard />
-      <>
         <ErrorName/>
         <ErrorNumber/>
         <ErrorCode/>
         <ErrorDate/>
-      </>
     </div>
   );
 }
