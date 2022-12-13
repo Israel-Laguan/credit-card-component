@@ -38,17 +38,27 @@ const CreditCard = () => {
   }
 
   return (
-    <div className="creditCard">
-      <div data={`${networktoClass(network)}`}>
-        {network}
-        <p>{Cardnumber}</p>
-        <p>{name}</p>
-        <span>
-          <p>{DateCard}</p>
-          <p>{CodeCard}</p>
-        </span>
+    <div className="flex-creditCard">
+      <div className="flip-card">
+        <div className="flip-card-inner creditCard">
+          <div data={`${networktoClass(network)}`} className='flip-card-front'>
+            {network}
+            <p>{Cardnumber}</p>
+            <div className="flex-date-user">
+              <p>{name}</p>
+              <p>{DateCard}</p>
+            </div>
+          </div>
+          <div className="flip-card-back" data={`${networktoClass(network)}`} >
+              <span className="CodeBarra"></span>
+              <p className="codeCard">{CodeCard}</p>
+          </div>
+        </div>
+        <span>Coloca tu mouse encima de la tarjeta</span>
       </div>
-      <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate}/>
+      <div>
+        <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate}/>
+      </div>
     </div>
   );
 };

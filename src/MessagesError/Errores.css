@@ -1,0 +1,32 @@
+.error{
+    width: 410px;
+    height: 240px;
+    margin: 0 auto;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #000;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    background: #282c34;
+};
+
+.error h1{
+    margin: 10px 0;
+};
+
+.ErrorName{
+    display: none;
+};
+
+.ErrorCode{
+    display: none;
+}
+
+.ErrorCode{
+    display: none;
+}

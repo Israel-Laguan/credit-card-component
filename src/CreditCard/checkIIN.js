@@ -11,7 +11,7 @@ const checkIIN = (cardNumber = "") =>
   )[0] || ["Your Bank"])[0];
 
 const preCheckIIN = (cardNumber = "") => {
-  const digits =+ cardNumber.slice(0, 2);
+  const digits = Number(cardNumber.slice(0, 2)) || 0;
   if (digits > 39 && digits < 50) return "Visa";
   if (digits > 50 && digits < 56) return "MasterCard";
   if (digits === 34 || digits === 37) return "American Express";
