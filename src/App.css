@@ -309,7 +309,7 @@ body {
 
    /* Styles responsives card */
 
-  .flip-card{
+  .flip-card {
     width: 16em;
   }
 
@@ -317,7 +317,7 @@ body {
     width: 100%;
     margin: 20px auto;
   }
-}
+};
 
 
 /* ----Mobile responsive measures---- */
@@ -340,11 +340,11 @@ body {
     width: 100%;
   }
 
-  .flex-creditCard{
+  .flex-creditCard {
     display: flex;
   }
 
-  .flip-card-inner{
+  .flip-card-inner {
     width: 70%;
     margin: auto;
     display: block;
@@ -359,7 +359,7 @@ body {
     margin: 20px auto;
   }
 
-  .codeCard{
+  .codeCard {
     left: 73%;
   }
-}
+};
