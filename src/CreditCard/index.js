@@ -1,4 +1,3 @@
-/* eslint-disable no-sequences */
 import React from "react";
 import CreditCardForm from "./CreditCardForm";
 import check from "./checkIIN";
