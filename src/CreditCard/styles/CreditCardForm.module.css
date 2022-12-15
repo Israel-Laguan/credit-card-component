@@ -50,15 +50,16 @@
   background: #8e2de2;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .creditCardForm {
-    width: 70%;
-    margin: 60px auto;
+    width: 16em;
+    margin: 90px auto;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 740px) {
   .creditCardForm {
-    margin: 90px auto;
+    width: 17em;
+    margin: 60px auto;
   }
 }

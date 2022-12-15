@@ -133,7 +133,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         <input className="checkbox" type="checkbox" defaultChecked="true" />
       </fieldset>
       <div>
-        <button type="submit" onClick={ValidationForm}>Send</button>
+        <button type="submit" onClick={ValidationForm}>Pay</button>
       </div>
     </form>
   );
