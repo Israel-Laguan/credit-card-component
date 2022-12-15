@@ -42,22 +42,24 @@
   padding: 6px;
   margin: 10px auto 20px auto;
   border: 0;
+  display: block;
   border-radius: 10px;
   font-size: medium;
   cursor: pointer;
-  color: gray;
-  background: #323741;
-}
-
-@media screen and (max-width: 600px) {
-  .creditCardForm {
-    width: 70%;
-    margin: 60px auto;
-  }
+  color: #fff;
+  background: #8e2de2;
 }
 
 @media screen and (max-width: 1200px) {
   .creditCardForm {
+    width: 16em;
     margin: 90px auto;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .creditCardForm {
+    width: 17em;
+    margin: 60px auto;
   }
 }
