@@ -1,0 +1,266 @@
+.flexCreditCard {
+    width: 60%;
+    margin: 5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flipCardInner div:first-child {
+    margin: 1em 0;
+    padding: 1em;
+    height: 8em;
+    width: 14em;
+    border-radius: 20px;
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+    background: #8e2de2; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #4a00e0,
+        #8e2de2
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #4a00e0,
+        #8e2de2
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.flipCardInner div:first-child[data="american"] {
+    /* https://cssgradient.io/ */
+    background: rgb(102, 187, 106);
+    background: linear-gradient(
+        180deg,
+        rgba(102, 187, 106, 1) 23%,
+        rgba(56, 142, 60, 1) 35%
+    );
+}
+
+.flipCardInner div:first-child[data="diners"] {
+    background: rgb(255, 152, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 152, 0, 1) 23%,
+        rgba(239, 108, 0, 1) 35%
+    );
+}
+
+.flipCardInner div:first-child[data="mastercard"] {
+    background: rgb(3, 169, 244);
+    background: linear-gradient(
+        180deg,
+        rgba(3, 169, 244, 1) 23%,
+        rgba(2, 136, 209, 1) 35%
+    );
+}
+
+.flipCardInner div:first-child[data="visa"] {
+    background: rgb(212, 225, 87);
+    background: linear-gradient(
+        180deg,
+        rgba(212, 225, 87, 1) 23%,
+        rgba(175, 180, 43, 1) 35%
+    );
+} 
+
+.flipCardInner p {
+    margin: 5px 0;
+}
+
+.flipCardInner p:first-child {
+    margin: 18px 0;
+}
+
+.flipCardInner span {
+    width: 100%;
+    display: flex;
+}
+
+.flipCardInner span p:first-child {
+    margin: 5px 90px 0 0;
+}
+
+
+.CodeBarra {
+    width: 100%;
+    height: 50px;
+    margin: 25px 0 0 0;
+    background: #000;
+}
+
+.codeCard {
+    width: 70px;
+    height: 30px;
+    top: 50%;
+    left: 75%;
+    padding: 5px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    background: #333;
+}
+
+.flexDateUser {
+    width: 100%;
+    display: flex;
+}
+
+.flexDateUser p {
+    margin: 19px;
+}
+
+.flexDateUser:first-child {
+    width: 20%;
+}
+
+.flexDateUser:nth-child(2) {
+    width: 90%;
+}
+
+
+/* ------style animation flip-------- */
+
+.flipCard {
+    background-color: transparent;
+    width: 15em;
+    height: 13em;
+    border: 1px solid #282c34;
+    perspective: 2000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flipCard span {
+    display: block;
+    text-align: center;
+}
+
+  /* This container is needed to position the front and back side */
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+  /* Position the front and back side */
+.flipCardFront, .flipCardBack {
+    border-radius: 20px;
+    margin: 23px 0 0 -20px;
+    position: absolute;
+    width: 15em;
+    height: 10em;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+  /* Style the front side (fallback if image is missing) */
+.flipCardFront {
+    background-color: #bbb;
+    color: black;
+}
+
+  /* Style the back side */
+.flipCardBack {
+    width: 107%;
+    height: 77%;
+    transform: rotateY(180deg);
+    background: linear-gradient( to left, #4a00e0, #8e2de2 );
+}
+
+.flipCardBack[data="mastercard"] {
+    background: rgb(3, 169, 244);
+    background: linear-gradient(
+        180deg,
+        rgba(3, 169, 244, 1) 23%,
+        rgba(2, 136, 209, 1) 35%
+    );
+}
+
+.flipCardBack[data="visa"] {
+    background: rgb(212, 225, 87);
+    background: linear-gradient(
+        180deg,
+        rgba(212, 225, 87, 1) 23%,
+        rgba(175, 180, 43, 1) 35%
+    );
+} 
+
+.flipCardBack[data="diners"] {
+    background: rgb(255, 152, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 152, 0, 1) 23%,
+        rgba(239, 108, 0, 1) 35%
+    );
+}
+
+.flipCardBack[data="american"] {
+    /* https://cssgradient.io/ */
+    background: rgb(102, 187, 106);
+    background: linear-gradient(
+        180deg,
+        rgba(102, 187, 106, 1) 23%,
+        rgba(56, 142, 60, 1) 35%
+    );
+}
+
+@media screen and (max-width: 1200px) {
+
+    .flexCreditCard {
+        width: 50%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    /* Styles responsives card */
+
+    .flipCard {
+        width: 16em;
+    }
+
+    .flipCardBack {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .flexCreditCard {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    /* Styles responsives card */
+
+    .flipCard {
+        width: 100%;
+    }
+
+    .flipCardInner {
+        width: 70%;
+        margin: auto;
+        display: block;
+    }
+
+    .flipCardFront {
+        width: 88% !important;
+    }
+
+    .flipCardBack {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .codeCard {
+        left: 73%;
+    }
+};
+
+

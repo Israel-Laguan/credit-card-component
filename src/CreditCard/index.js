@@ -1,6 +1,7 @@
 import React from "react";
 import CreditCardForm from "./CreditCardForm";
 import check from "./checkIIN";
+import Style from '../CreditCard/styles/CreditCard.module.css'
 
 const { checkNetwork, networktoClass } = check;
 
@@ -38,20 +39,20 @@ const CreditCard = () => {
   }
 
   return (
-    <div className="flex-creditCard">
-      <div className="flip-card">
-        <div className="flip-card-inner creditCard">
-          <div data={`${networktoClass(network)}`} className='flip-card-front'>
+    <div className={Style.flexCreditCard}>
+      <div className={Style.flipCard}>
+        <div className={Style.flipCardInner}>
+          <div data={`${networktoClass(network)}`} className={Style.flipCardFront}>
             {network}
             <p>{Cardnumber}</p>
-            <div className="flex-date-user">
+            <div className={Style.flexDateUser}>
               <p>{name}</p>
               <p>{DateCard}</p>
             </div>
           </div>
-          <div className="flip-card-back" data={`${networktoClass(network)}`} >
-              <span className="CodeBarra"></span>
-              <p className="codeCard">{CodeCard}</p>
+          <div className={Style.flipCardBack} data={`${networktoClass(network)}`} >
+              <span className={Style.CodeBarra}></span>
+              <p className={Style.codeCard}>{CodeCard}</p>
           </div>
         </div>
         <span>Coloca tu mouse encima de la tarjeta</span>
