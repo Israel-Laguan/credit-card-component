@@ -1,13 +1,11 @@
 import React from "react";
 import '../MessagesCard/styles/Style-MessagesCard.css'
 
-function Completed(){
-    return(
-        <div id="completed" className="completed">
+const Completed = () => (
+    <div id="completed" className="completed">
             <p>Successful payment</p>
             <a href="/">Your shopping</a>
-        </div>
-    )
-}
+    </div>
+)
 
 export default Completed
