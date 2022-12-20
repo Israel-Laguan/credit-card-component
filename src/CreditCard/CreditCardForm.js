@@ -127,9 +127,8 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         <fieldset className={Style.info_user}>
           <label>Fecha</label>
           <input
-          id="CardDate"
-            placeholder="MM/YY" 
-            class="masked" 
+            id="CardDate"
+            className="masked" 
             pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)" 
             data-valid-example="05/18"
             onChange={handleChangeDate}
