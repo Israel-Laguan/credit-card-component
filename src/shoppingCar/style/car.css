@@ -1,0 +1,114 @@
+p {
+    color: #fff;
+}
+
+.shoppingCar {
+    width: 90%;
+    margin: 0 auto 30px auto;
+}
+
+.flexCard {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.products {
+    width: 100%;
+    border: 0 2px 0 0 solid #000;
+}
+
+.products p:first-child {
+    font-size: 28px;
+}
+
+.pay {
+    width: 25%;
+}
+
+.pay p:first-child {
+    font-size: 28px;
+}
+
+.pay button {
+    width: 100%;
+    margin: auto;
+    padding: 3px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+}
+
+/* Styles of products added to the shopping cart */
+
+.product {
+    width: 90%;
+    height: 33vh;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    background: linear-gradient( to left, #4a00e0, #8e2de2 )
+}
+
+.imageProduct {
+    width: 30%;
+}
+
+.imageProduct img {
+    width: 200px;
+}
+
+.infoProduct {
+    width: 30%;
+}
+
+.infoProduct p:first-child {
+    font-size: 25px;
+}
+
+.precioProduct {
+    width: 20%;
+}
+
+.precioProduct p:first-child {
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .products {
+        width: 80%;
+        margin: auto;
+    }
+
+    .product {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .product img {
+        width: 60%;
+        margin: auto;
+        display: block;
+    }
+
+    .imageProduct {
+        width: 100%;
+        height: 10%;
+    }
+
+    .infoProduct {
+        width: 50%;
+    }
+
+    .precioProduct {
+        width: 50%;
+    }
+
+    .pay {
+        width: 100%;
+    }
+}
