@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<ShoppingCar/>}/>
-        <Route path='/newcard' element={<App />}/>
+        <Route path='/payment' element={<App />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

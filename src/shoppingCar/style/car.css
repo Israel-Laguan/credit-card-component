@@ -30,7 +30,7 @@ p {
     font-size: 28px;
 }
 
-.pay button {
+.link {
     width: 100%;
     margin: auto;
     padding: 3px;
@@ -38,7 +38,10 @@ p {
     border-radius: 5px;
     font-size: 18px;
     display: block;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
+    background: #fff;
 }
 
 /* Styles of products added to the shopping cart */

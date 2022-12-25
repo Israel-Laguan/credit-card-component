@@ -1,15 +1,8 @@
 import React from "react";
 import '../shoppingCar/style/car.css'
-import {useNavigate} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function ShoppingCar(){
-
-    const NavButton = useNavigate()
-    
-    function RoutePay(){
-        NavButton('/newcard')
-    }
-
     return(
         <div className="shoppingCar">
             <h1 style={{color: 'white'}}>Shopping cart</h1>
@@ -29,7 +22,7 @@ function ShoppingCar(){
                         <div className="pay">
                             <p>I pay</p>
                             <p>Make your purchase now!</p>
-                            <button onClick={RoutePay}>To pay</button>
+                            <Link className="link" to='/payment'>To pay</Link>
                         </div>
                     </div>
 
@@ -47,7 +40,7 @@ function ShoppingCar(){
                         <div className="pay">
                             <p>I pay</p>
                             <p>Make your purchase now!</p>
-                            <button onClick={RoutePay}>To pay</button>
+                            <Link className="link" to='/payment'>To pay</Link>
                         </div>
                     </div>
                 </div>
