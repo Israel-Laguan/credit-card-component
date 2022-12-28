@@ -41,7 +41,7 @@ const CreditCard = () => {
 
   return (
     <div className={Style.flexCreditCard}>
-      <div className={Style.flipCard} id='Card'>
+      <div className={Style.flipCard}>
         <div className={Style.flipCardInner}>
           <div data={`${networktoClass(network)}`} className={Style.flipCardFront}>
             {network}

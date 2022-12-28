@@ -39,8 +39,10 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     if (e.preventDefault) e.preventDefault(); //normal browsers
     e.returnValue = false; //IE
   };
+  
+  const ToGo = useNavigate()
 
-  const ValidationErrorForm = (e) => {
+  const ValidationErrorForm = () => {
 
     const CardNumber = document.querySelector('#CardNumber').value
     const CardName = document.querySelector('#CardName').value
@@ -80,14 +82,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     }
   };
 
-  const ToGo = useNavigate()
-  
-  const Redirect = () => {
-    ToGo('/completed')
-  };
-
-
-  const ValidationForm = (e) =>{
+  const ValidationForm = (e) => {
 
     e.preventDefault()
 
@@ -114,7 +109,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
       },5000)
       
       setTimeout(()=>{
-        Redirect()
+        ToGo('/completed')
       }, 6500)
     }
 
@@ -132,6 +127,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           minLength="5"
           maxLength="56"
           id="CardName"
+          className="inputForm"
           onChange={handleChangeName}
         />
       </fieldset>
@@ -144,6 +140,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           name="card"
           pattern="\d*"
           id='CardNumber'
+          className="inputForm"
           onKeyDown={onKeyDown}
           value={card}
           onChange={onchange}
@@ -156,6 +153,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
             type='tel'
             mask='99/99'
             id="CardDate"
+            className="inputForm"
             onChange={handleChangeDate}
           />
         </fieldset>
@@ -166,6 +164,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
             minLength="2" 
             maxLength="3"
             id='CodeCard'
+            className="inputForm"
             onChange={handleChangeCode} 
           />
         </fieldset>

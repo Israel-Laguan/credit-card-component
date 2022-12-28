@@ -11,7 +11,7 @@ const Completed = () => (
             </div>
             <h1>Payment completed</h1>
             <div>
-                <p className="anun">Thanks for your purchase</p>
+                <p className="advertisement">Thanks for your purchase</p>
                 <Link className="link" to='/'>Shopping cart</Link>
             </div>
         </div>

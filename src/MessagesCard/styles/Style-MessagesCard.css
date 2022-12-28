@@ -24,7 +24,6 @@
     width: 50%;
     margin: 0 auto;
     font-size: 21px;
-    font-family: 'Segoe UI';
 }
 
 .check {
@@ -62,7 +61,6 @@
 .incompleted p {
     margin: 0;
     font-size: 18px;
-    font-family: 'Segoe UI';
 }
 
 .incompleted a {
