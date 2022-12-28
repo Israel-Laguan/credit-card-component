@@ -1,0 +1,34 @@
+h1 {
+    color: #fff;
+}
+
+.anun {
+    font-size: 18px;
+}
+
+.container-completed {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-completed {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 90px;
+    background: green;
+    color: #fff;
+}
+
+.link {
+    width: 150px;
+    padding: 10px;
+    color: green;
+}

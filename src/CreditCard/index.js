@@ -2,6 +2,7 @@ import React from "react";
 import CreditCardForm from "./CreditCardForm";
 import check from "./checkIIN";
 import Style from '../CreditCard/styles/CreditCard.module.css'
+import Loading from "./Loading/Loading";
 
 const { checkNetwork, networktoClass } = check;
 
@@ -40,7 +41,7 @@ const CreditCard = () => {
 
   return (
     <div className={Style.flexCreditCard}>
-      <div className={Style.flipCard}>
+      <div className={Style.flipCard} id='Card'>
         <div className={Style.flipCardInner}>
           <div data={`${networktoClass(network)}`} className={Style.flipCardFront}>
             {network}
@@ -55,7 +56,8 @@ const CreditCard = () => {
               <p className={Style.codeCard}>{CodeCard}</p>
           </div>
         </div>
-        <span>Hover your mouse over the card</span>
+        <Loading/>
+        <span>Mouse over the card to see the ccv</span>
       </div>
       <div>
         <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate}/>

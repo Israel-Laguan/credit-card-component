@@ -118,6 +118,9 @@
     width: 90%;
 }
 
+.filter {
+    filter: opacity(10px);
+}
 
 /* ------style animation flip-------- */
 
