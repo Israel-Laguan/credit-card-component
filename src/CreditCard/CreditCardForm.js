@@ -83,9 +83,8 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
   };
 
   const ValidationForm = (e) => {
-
     e.preventDefault()
-
+    
     const randomnum = Math.floor(Math.random() * 2)
     const spinner = document.querySelector('.lds-ring')
 
