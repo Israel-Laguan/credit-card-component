@@ -1,7 +1,7 @@
 import React from "react";
-import { FaCheck } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import '../Completed/Completed.css'
+import { FaCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "../Completed/Completed.css";
 
 const Completed = () => (
     <div className="container-completed">
@@ -12,7 +12,7 @@ const Completed = () => (
             <h1>Payment completed</h1>
             <div>
                 <p className="advertisement">Thanks for your purchase</p>
-                <Link className="link" to='/'>Shopping cart</Link>
+                <Link className="link-completed" to='/'>Shopping cart</Link>
             </div>
         </div>
     </div>

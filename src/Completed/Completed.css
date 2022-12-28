@@ -27,8 +27,13 @@ h1 {
     color: #fff;
 }
 
-.link {
-    width: 150px;
-    padding: 10px;
+.link-completed {
+    width: 120px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
     color: green;
+    background: #fff;
 }
