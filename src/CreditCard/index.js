@@ -18,7 +18,6 @@ const CreditCard = () => {
     e.preventDefault();
     if (e.target.name === "card") {
       const network = checkNetwork(e.target.value);
-      console.log(network);
       if (network) {
         setNetwork(network);
       }
