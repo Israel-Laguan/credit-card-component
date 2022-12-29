@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Style from '../CreditCard/styles/CreditCardForm.module.css'
 import MaskedInput from "react-input-mask";
 import { useNavigate } from 'react-router-dom'
@@ -39,6 +39,19 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     if (e.preventDefault) e.preventDefault(); //normal browsers
     e.returnValue = false; //IE
   };
+
+  const [disabled, setdisabled] = useState(true)
+
+  useEffect(() => {
+    const InputForm = document.querySelectorAll('.inputForm')
+    for (const i of InputForm) {
+      if(i.value !== ''){
+        setdisabled(false)
+      }else{
+        setdisabled(true)
+      }
+    }
+  })
   
   const ToGo = useNavigate()
 
@@ -125,6 +138,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           minLength="5"
           maxLength="56"
           id="CardName"
+          className="inputForm"
           onChange={handleChangeName}
         />
       </fieldset>
@@ -137,6 +151,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           name="card"
           pattern="\d*"
           id='CardNumber'
+          className="inputForm"
           onKeyDown={onKeyDown}
           value={card}
           onChange={onchange}
@@ -149,6 +164,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
             type='tel'
             mask='99/99'
             id="CardDate"
+            className="inputForm"
             onChange={handleChangeDate}
           />
         </fieldset>
@@ -159,6 +175,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
             minLength="2" 
             maxLength="3"
             id='CodeCard'
+            className="inputForm"
             onChange={handleChangeCode} 
           />
         </fieldset>
@@ -168,7 +185,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         <input className="checkbox" type="checkbox" defaultChecked="true" />
       </fieldset>
       <div>
-        <button type="submit" onClick={ValidationForm}>Pay</button>
+        <button type="submit" disabled={disabled} onClick={ValidationForm}>Pay</button>
       </div>
     </form>
   );
