@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import ShoppingCar from './shoppingCar/Car';
+import Completed from './Completed/Completed';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={<ShoppingCar/>}/>
         <Route path='/payment' element={<App />}/>
+        <Route path='/completed' element={<Completed/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

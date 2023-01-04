@@ -118,7 +118,6 @@
     width: 90%;
 }
 
-
 /* ------style animation flip-------- */
 
 .flipCard {
@@ -214,7 +213,7 @@
 
     .flexCreditCard {
         width: 50%;
-        margin: auto;
+        margin: 40px auto;
         flex-wrap: wrap;
     }
 
@@ -234,6 +233,7 @@
 
     .flexCreditCard {
         width: 100%;
+        margin: 40px auto;
         flex-wrap: wrap;
     }
 

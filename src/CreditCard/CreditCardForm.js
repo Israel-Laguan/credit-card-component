@@ -1,6 +1,7 @@
 import React from "react";
 import Style from '../CreditCard/styles/CreditCardForm.module.css'
 import MaskedInput from "react-input-mask";
+import { useNavigate } from 'react-router-dom'
 
 const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName}) => {
   const onKeyDown = (e) => {
@@ -38,16 +39,15 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     if (e.preventDefault) e.preventDefault(); //normal browsers
     e.returnValue = false; //IE
   };
+  
+  const ToGo = useNavigate()
 
-  const ValidationForm = (e) =>{
-
-    e.preventDefault()
+  const ValidationErrorForm = () => {
 
     const CardNumber = document.querySelector('#CardNumber').value
     const CardName = document.querySelector('#CardName').value
     const CardCode = document.querySelector('#CodeCard').value
     const CardDate = document.querySelector('#CardDate').value
-    const randomnum = Math.floor(Math.random() * 2)
 
     if(CardName.length < 5 || CardName.length > 56){
       const error = document.querySelector('.ErrorName')
@@ -80,6 +80,18 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         error.style.display = 'none'
       }, 5000);
     }
+  };
+
+  const ValidationForm = (e) => {
+    e.preventDefault()
+    const randomnum = Math.floor(Math.random() * 2)
+    const spinner = document.querySelector('.lds-ring')
+
+    spinner.style.display = 'block'
+
+    setTimeout(()=>{
+      spinner.style.display = 'none'
+    }, 5000)
 
     if(randomnum === 0){
       const MessageIncompleted = document.querySelector('.incompleted')
@@ -93,7 +105,13 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
       setTimeout(()=>{
         MessageCompleted.style.display = 'block'
       },5000)
+      
+      setTimeout(()=>{
+        ToGo('/completed')
+      }, 6500)
     }
+
+    ValidationErrorForm()
   };
 
   return (

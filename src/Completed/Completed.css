@@ -1,0 +1,39 @@
+h1 {
+    color: #fff;
+}
+
+.advertisement {
+    font-size: 18px;
+}
+
+.container-completed {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-completed {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 90px;
+    background: green;
+    color: #fff;
+}
+
+.link-completed {
+    width: 120px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
+    color: green;
+    background: #fff;
+}
