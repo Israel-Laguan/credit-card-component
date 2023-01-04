@@ -130,6 +130,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           <MaskedInput
             type='tel'
             mask='99/99'
+            id="CardDate"
             onChange={handleChangeDate}
           />
         </fieldset>

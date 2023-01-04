@@ -55,7 +55,7 @@ const CreditCard = () => {
               <p className={Style.codeCard}>{CodeCard}</p>
           </div>
         </div>
-        <span>Coloca tu mouse encima de la tarjeta</span>
+        <span>Hover your mouse over the card</span>
       </div>
       <div>
         <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate}/>

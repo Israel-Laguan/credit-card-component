@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link } from 'react-router-dom';
 import './App.css';
 import CreditCard from './CreditCard';
 import ErrorName from './MessagesError/ErrorName';
@@ -12,7 +13,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <span>&#8249;</span>
+        <span>
+          <Link to='/'>&#8249;</Link>
+        </span>
         <span>
           Complete your Payment
         </span>
