@@ -1,5 +1,6 @@
 import React from "react";
 import Style from '../CreditCard/styles/CreditCardForm.module.css'
+import MaskedInput from "react-input-mask";
 
 const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName}) => {
   const onKeyDown = (e) => {
@@ -125,12 +126,10 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
       </fieldset>
       <div>
         <fieldset className={Style.info_user}>
-          <label>Fecha</label>
-          <input
-            id="CardDate"
-            className="masked" 
-            pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)" 
-            data-valid-example="05/18"
+          <label>MM/YY</label>
+          <MaskedInput
+            type='tel'
+            mask='99/99'
             onChange={handleChangeDate}
           />
         </fieldset>
