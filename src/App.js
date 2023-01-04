@@ -5,6 +5,8 @@ import ErrorName from './MessagesError/ErrorName';
 import ErrorNumber from './MessagesError/ErrorNumber';
 import ErrorCode from './MessagesError/ErrorCode';
 import ErrorDate from './MessagesError/ErrorDate';
+import Completed from './MessagesCard/Completed';
+import Incompleted from './MessagesCard/Incompleted';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <ErrorNumber/>
         <ErrorCode/>
         <ErrorDate/>
+        <Completed/>
+        <Incompleted/>
     </div>
   );
 }

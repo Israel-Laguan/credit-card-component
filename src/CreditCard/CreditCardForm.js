@@ -46,7 +46,8 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     const CardName = document.querySelector('#CardName').value
     const CardCode = document.querySelector('#CodeCard').value
     const CardDate = document.querySelector('#CardDate').value
-  
+    const randomnum = Math.floor(Math.random() * 2)
+
     if(CardName.length < 5 || CardName.length > 56){
       const error = document.querySelector('.ErrorName')
       error.style.display = 'block'
@@ -77,7 +78,21 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
       setTimeout(() => {
         error.style.display = 'none'
       }, 5000);
-    }  
+    }
+
+    if(randomnum === 0){
+      const MessageIncompleted = document.querySelector('.incompleted')
+      setTimeout(()=>{
+        MessageIncompleted.style.display = 'block'
+      },5000)
+    }
+    
+    if(randomnum === 1){
+      const MessageCompleted = document.querySelector('.completed')
+      setTimeout(()=>{
+        MessageCompleted.style.display = 'block'
+      },5000)
+    }
   };
 
   return (
@@ -110,11 +125,13 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
       </fieldset>
       <div>
         <fieldset className={Style.info_user}>
-          <label>MM/YY</label>
-          <input 
-            type="text"
+          <label>Fecha</label>
+          <input
             id="CardDate"
-            onChange={handleChangeDate} 
+            className="masked" 
+            pattern="(1[0-2]|0[1-9])\/(1[5-9]|2\d)" 
+            data-valid-example="05/18"
+            onChange={handleChangeDate}
           />
         </fieldset>
         <fieldset className={Style.info_user}>
