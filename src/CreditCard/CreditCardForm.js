@@ -1,10 +1,9 @@
 import React from "react";
-import Style from '../CreditCard/styles/CreditCardForm.module.css'
+import Style from "../CreditCard/styles/CreditCardForm.module.css"
 import MaskedInput from "react-input-mask";
-import { useNavigate } from 'react-router-dom'
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"
 
-const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName}) => {
+const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName, disabled}) => {
   const onKeyDown = (e) => {
     // https://stackoverflow.com/a/43710277
     let key = e.keyCode || e.which; // get key cross-browser
@@ -41,19 +40,6 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     e.returnValue = false; //IE
   };
 
-  const [disabled, setdisabled] = useState(true)
-
-  useEffect(()=>{
-    const Inputs = document.querySelectorAll('.inputForm')
-    for (const i of Inputs) {
-      if(i.value !== ''){
-        setdisabled(false)
-      }else{
-        setdisabled(true)
-      }
-    }
-  })
-  
   const ToGo = useNavigate()
 
   const ValidationErrorForm = () => {

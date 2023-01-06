@@ -1,5 +1,5 @@
 import React from "react";
-import '../Loading/Loading.css'
+import "../Loading/Loading.css"
 
 const Loading = () => (
     <div class="lds-ring">
