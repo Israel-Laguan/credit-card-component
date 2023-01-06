@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Style from "../CreditCard/styles/CreditCardForm.module.css"
+import React, { useEffect, useState } from "react";
+import Style from '../CreditCard/styles/CreditCardForm.module.css'
 import MaskedInput from "react-input-mask";
 import { useNavigate } from "react-router-dom"
 
@@ -41,6 +41,19 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
   };
 
   const [loading, setloading] = useState('Pay')
+  const [disabled, setdisabled] = useState(true)
+
+  useEffect(() => {
+    const InputForm = document.querySelectorAll('.inputForm')
+    for (const i of InputForm) {
+      if(i.value !== ''){
+        setdisabled(false)
+      }else{
+        setdisabled(true)
+      }
+    }
+  })
+  
   const ToGo = useNavigate()
 
   const ValidationErrorForm = () => {
