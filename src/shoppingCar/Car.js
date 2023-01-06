@@ -1,6 +1,6 @@
 import React from "react";
-import '../shoppingCar/style/car.css'
-import { Link } from 'react-router-dom'
+import "../shoppingCar/style/car.css"
+import { Link } from "react-router-dom"
 
 const ShoppingCar = () => (
     <div className="shoppingCar">

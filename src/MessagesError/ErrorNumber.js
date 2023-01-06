@@ -1,5 +1,5 @@
-import React from 'react'
-import '../MessagesError/Errores.css'
+import React from "react"
+import "../MessagesError/Errores.css"
 
 const ErrorName = () =>{
     return(
