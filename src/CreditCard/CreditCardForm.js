@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Style from "../CreditCard/styles/CreditCardForm.module.css"
 import MaskedInput from "react-input-mask";
 import { useNavigate } from "react-router-dom"
@@ -40,6 +40,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     e.returnValue = false; //IE
   };
 
+  const [loading, setloading] = useState('Pay')
   const ToGo = useNavigate()
 
   const ValidationErrorForm = () => {
@@ -88,9 +89,11 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     const spinner = document.querySelector('.lds-ring')
 
     spinner.style.display = 'block'
+    setloading('Loading...')
 
     setTimeout(()=>{
       spinner.style.display = 'none'
+      setloading('Pay')
     }, 5000)
 
     if(randomnum === 0){
@@ -172,7 +175,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         <input className="checkbox" type="checkbox" defaultChecked="true" />
       </fieldset>
       <div>
-        <button type="submit" disabled={disabled} onClick={ValidationForm}>Pay</button>
+        <button type="submit" disabled={disabled} onClick={ValidationForm}>{loading}</button>
       </div>
     </form>
   );
