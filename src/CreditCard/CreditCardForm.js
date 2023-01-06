@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Style from '../CreditCard/styles/CreditCardForm.module.css'
+import React, { useState } from "react";
+import Style from "../CreditCard/styles/CreditCardForm.module.css"
 import MaskedInput from "react-input-mask";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom"
 
-const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName}) => {
+const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, handleChangeName, disabled}) => {
   const onKeyDown = (e) => {
     // https://stackoverflow.com/a/43710277
     let key = e.keyCode || e.which; // get key cross-browser
@@ -40,19 +40,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     e.returnValue = false; //IE
   };
 
-  const [disabled, setdisabled] = useState(true)
-
-  useEffect(() => {
-    const InputForm = document.querySelectorAll('.inputForm')
-    for (const i of InputForm) {
-      if(i.value !== ''){
-        setdisabled(false)
-      }else{
-        setdisabled(true)
-      }
-    }
-  })
-  
+  const [loading, setloadind] = useState('Pay')
   const ToGo = useNavigate()
 
   const ValidationErrorForm = () => {
@@ -101,9 +89,11 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     const spinner = document.querySelector('.lds-ring')
 
     spinner.style.display = 'block'
+    setloadind('Cargando...')
 
     setTimeout(()=>{
       spinner.style.display = 'none'
+      setloadind('Pay')
     }, 5000)
 
     if(randomnum === 0){
@@ -172,8 +162,8 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           <label>CCV</label>
           <input 
             type="text" 
-            minLength="2" 
-            maxLength="3"
+            minLength="2"
+            maxLength='3'
             id='CodeCard'
             className="inputForm"
             onChange={handleChangeCode} 
@@ -185,7 +175,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
         <input className="checkbox" type="checkbox" defaultChecked="true" />
       </fieldset>
       <div>
-        <button type="submit" disabled={disabled} onClick={ValidationForm}>Pay</button>
+        <button type="submit" disabled={disabled} onClick={ValidationForm}>{loading}</button>
       </div>
     </form>
   );
