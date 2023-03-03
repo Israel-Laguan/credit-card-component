@@ -22,7 +22,7 @@ module.exports = {
         .prompt(questions)
         .then(answers => {
           const { category, component_name} = answers
-          const path = `${component_name}`
+          const path = `${category}/${component_name}`
           const absPath = `src/components/${path}`
           return { ...answers, path, absPath, category }
         })
