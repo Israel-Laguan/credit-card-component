@@ -23,7 +23,7 @@ module.exports = {
         .then(answers => {
           const { category, component_name} = answers
           const path = `${component_name}`
-          const absPath = `src/${path}`
+          const absPath = `src/components/${path}`
           return { ...answers, path, absPath, category }
         })
     }
