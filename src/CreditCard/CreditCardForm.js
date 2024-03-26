@@ -40,7 +40,21 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     e.returnValue = false; //IE
   };
 
-  const [loading, setloadind] = useState('Pay')
+
+  const [loading, setloading] = useState('Pay')
+  const [disabled, setdisabled] = useState(true)
+
+  useEffect(() => {
+    const InputForm = document.querySelectorAll('.inputForm')
+    for (const i of InputForm) {
+      if(i.value !== ''){
+        setdisabled(false)
+      }else{
+        setdisabled(true)
+      }
+    }
+  })
+  
   const ToGo = useNavigate()
 
   const ValidationErrorForm = () => {
@@ -89,11 +103,12 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     const spinner = document.querySelector('.lds-ring')
 
     spinner.style.display = 'block'
-    setloadind('Cargando...')
+
+    setloading('Loading...')
 
     setTimeout(()=>{
       spinner.style.display = 'none'
-      setloadind('Pay')
+      setloading('Pay')
     }, 5000)
 
     if(randomnum === 0){

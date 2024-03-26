@@ -118,6 +118,11 @@
     width: 90%;
 }
 
+.hoverCcv {
+    display: none;
+    text-align: center;
+}
+
 /* ------style animation flip-------- */
 
 .flipCard {
@@ -128,7 +133,7 @@
     perspective: 2000px; /* Remove this if you don't want the 3D effect */
 }
 
-.flipCard span {
+.flipCard span:first-child {
     display: block;
     text-align: center;
 }

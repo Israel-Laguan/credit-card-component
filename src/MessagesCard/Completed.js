@@ -1,6 +1,6 @@
 import React from "react";
-import { FaCheck } from 'react-icons/fa'
-import '../MessagesCard/styles/Style-MessagesCard.css'
+import { FaCheck } from "react-icons/fa"
+import "../MessagesCard/styles/Style-MessagesCard.css"
 
 const Completed = () => (
     <div id="completed" className="completed">

@@ -47,8 +47,8 @@ p {
 /* Styles of products added to the shopping cart */
 
 .product {
-    width: 90%;
-    height: 33vh;
+    width: 70%;
+    height: 230px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
@@ -83,7 +83,7 @@ p {
 
 @media screen and (max-width: 1000px) {
     .products {
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
 
@@ -113,5 +113,11 @@ p {
 
     .pay {
         width: 100%;
+    }
+}
+
+@media  screen and (max-width: 2000px) {
+    .product {
+        width: 90%;
     }
 }
