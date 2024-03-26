@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Style from '../CreditCard/styles/CreditCardForm.module.css'
+import React, { useState } from "react";
+import Style from "../CreditCard/styles/CreditCardForm.module.css"
 import MaskedInput from "react-input-mask";
 import { useNavigate } from "react-router-dom"
 
@@ -39,6 +39,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     if (e.preventDefault) e.preventDefault(); //normal browsers
     e.returnValue = false; //IE
   };
+
 
   const [loading, setloading] = useState('Pay')
   const [disabled, setdisabled] = useState(true)
@@ -102,6 +103,7 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
     const spinner = document.querySelector('.lds-ring')
 
     spinner.style.display = 'block'
+
     setloading('Loading...')
 
     setTimeout(()=>{
@@ -175,8 +177,8 @@ const CreditCardForm = ({ card, onchange, handleChangeCode, handleChangeDate, ha
           <label>CCV</label>
           <input 
             type="text" 
-            minLength="2" 
-            maxLength="3"
+            minLength="2"
+            maxLength='3'
             id='CodeCard'
             className="inputForm"
             onChange={handleChangeCode} 

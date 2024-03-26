@@ -1,7 +1,7 @@
 import React from "react";
 import CreditCardForm from "./CreditCardForm";
 import check from "./checkIIN";
-import Style from '../CreditCard/styles/CreditCard.module.css'
+import Style from "../CreditCard/styles/CreditCard.module.css"
 import Loading from "./Loading/Loading";
 
 const { checkNetwork, networktoClass } = check;
@@ -13,6 +13,7 @@ const CreditCard = () => {
   const [Cardnumber, setCardNumber] = React.useState("")
   const [DateCard, setDateCard] = React.useState("")
   const [CodeCard, setCodeCard] = React.useState("")
+  const [disabled, setdisabled] = React.useState(true)
 
   const onChange = (e) => {
     e.preventDefault();
@@ -24,18 +25,41 @@ const CreditCard = () => {
       setCard(e.target.value);
       setCardNumber(e.target.value)
     }
+    if(e.target.value.length === 13 ){
+      setdisabled(false)
+    }else{
+      setdisabled(true)
+    }
   };
 
   const handleChangeName = (e) =>{
     setName(e.target.value)
+    if(e.target.value.length === 20){
+      setdisabled(false)
+    }else{
+      setdisabled(true)
+    }
   }
 
   const handleChangeDate = (e) =>{
     setDateCard(e.target.value)
+    if(e.target.value.length !== 0){
+      setdisabled(false)
+    }else{
+      setdisabled(true)
+    }
   }
 
   const handleChangeCode = (e) =>{
-    setCodeCard(e.target.value)
+    const Code = document.querySelector("#messageCCV")
+    setCodeCard(e.target.value) 
+    if(e.target.value.length === 3){
+      Code.style.display = 'block'
+      setdisabled(false)
+    }else if(e.target.value.length < 3){
+      Code.style.display = 'none'
+      setdisabled(true)
+    }
   }
 
   return (
@@ -56,10 +80,10 @@ const CreditCard = () => {
           </div>
         </div>
         <Loading/>
-        <span>Mouse over the card to see the ccv</span>
+        <span className={Style.hoverCcv} id="messageCCV">Mouse over the card to see the ccv</span>
       </div>
       <div>
-        <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate}/>
+        <CreditCardForm card={card} onchange={onChange} handleChangeName={handleChangeName} handleChangeCode={handleChangeCode} handleChangeDate={handleChangeDate} disabled={disabled}/>
       </div>
     </div>
   );
